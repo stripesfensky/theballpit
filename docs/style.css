@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #e13d3d;
+  --orange: #fec24d;
+  --green: #50bb85;
+  --purple: #8f79ec;
+}
+
 html {
+  visibility: hidden;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1rem;
 }
 
-* {
-  box-sizing: border-box;
-  outline: 1px solid black;
-  transition: 0.2s;
-}
-
 body {
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -25,7 +32,7 @@ body {
 }
 
 header {
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
 }
 
   #header-wrap {
@@ -35,20 +42,32 @@ header {
     #header-logo {
       align-items: center;
       display: flex;
-      gap: 0.5rem;
+      gap: 1rem;
     }
 
       #header-logo-brandmark {
+        height: 3rem;
         max-height: 3rem;
+        width: 3rem;
       }
 
       #header-logo-wordmark {
         margin: 0;
+        padding-top: 0.5rem;
       }
 
     #header-search {
       flex: 1
     }
+
+    #header-settings {
+      align-items: center;
+      display: flex;
+    }
+
+      #header-darkmode-icon:hover {
+        cursor: pointer;
+      }
 
 main {
   flex: 1;
