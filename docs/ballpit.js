@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  var theme = localStorage.getItem("theme") || "light";
+  var theme = localStorage.getItem("theme") || "dark";
   var html = document.querySelector("html");
   var body = document.querySelector("body");
   var header = document.querySelector("header");
@@ -63,17 +63,15 @@ function darkmode_toggle(theme, body, header, wordmark, darkmode_icon, brandmark
 function darkmode(body, header, wordmark, darkmode_icon, brandmark_svg_pit){
   body.style.backgroundColor = "#222222";
   header.style.backgroundColor = "#101010";
-  wordmark.style.color = "#FFFFFF";
+  header.style.color = "#FFFFFF";
   darkmode_icon.className = "fa-solid fa-sun";
-  darkmode_icon.style.color = "#FFFFFF";
   brandmark_svg_pit.setAttribute("fill", "#FFFFFF");
 }
 
 function lightmode(body, header, wordmark, darkmode_icon, brandmark_svg_pit){
   body.style.backgroundColor = "#FFFFFF";
   header.style.backgroundColor = "#FAFAFA";
-  wordmark.style.color = "#000000";
+  header.style.color = "#000000";
   darkmode_icon.className = "fa-regular fa-moon";
-  darkmode_icon.style.color = "#000000";
   brandmark_svg_pit.setAttribute("fill", "#000000");
 }
