@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
 
   brandmark_colors(brandmark_svg);
   html.style.visibility = "visible";
-  
+
   darkmode_icon.addEventListener("click", () => {
     theme = localStorage.getItem("theme") || "light";
     darkmode_toggle(theme, body, header, wordmark, darkmode_icon, brandmark_svg_pit);
@@ -51,12 +51,10 @@ function brandmark_colors(brandmark_svg){
 
 function darkmode_toggle(theme, body, header, wordmark, darkmode_icon, brandmark_svg_pit){
   if (theme === "light") {
-    console.log("Light -> dark");
     localStorage.setItem("theme", "dark");
     darkmode(body, header, wordmark, darkmode_icon, brandmark_svg_pit);
   }
   else {
-    console.log("Dark -> light");
     localStorage.setItem("theme", "light");
     lightmode(body, header, wordmark, darkmode_icon, brandmark_svg_pit);
   }
