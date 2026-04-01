@@ -10,16 +10,22 @@
   --orange: #fec24d;
   --green: #50bb85;
   --purple: #8f79ec;
+  --light: #fafafa;
+  --mediumlight: #d3d3d3;
+  --mediumdark: #222222;
+  --dark: #101010;
+  --white: #ffffff;
+  --font: 'IBM Plex Sans', sans-serif;
 }
 
 html {
   visibility: hidden;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font);
   font-size: 1rem;
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -32,7 +38,7 @@ body {
 }
 
 header {
-  background-color: #FAFAFA;
+  background-color: var(--light);
 }
 
   #header-wrap {
@@ -57,13 +63,34 @@ header {
       }
 
     #header-search {
-      flex: 1
+      flex: 1;
+      margin: 0.75rem 3rem -0.75rem 3rem;
     }
+
+      #header-search-input {
+        border: 2px solid var(--mediumlight);
+        border-radius: 5px;
+        font-family: var(--font);
+        min-width: 100%;
+        padding: 0.5rem 1rem;
+      }
 
     #header-settings {
       align-items: center;
       display: flex;
     }
+
+      #header-settings-icon {
+        font-size: 1.5rem;
+        margin: 0;
+        padding-top: 0.5rem;
+      }
+
+      #header-settings-icon:hover {
+        cursor: pointer;
+        color: var(--orange);
+        transition: 0.2s;
+      }
 
       #header-darkmode-icon:hover {
         cursor: pointer;
