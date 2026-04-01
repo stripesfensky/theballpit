@@ -72,8 +72,13 @@ header {
         border: 2px solid var(--mediumlight);
         border-radius: 5px;
         font-family: var(--font);
+        font-size: 0.75rem;
         min-width: 100%;
         padding: 0.5rem 1rem;
+      }
+
+      #header-search-input::placeholder {
+        color: var(--mediumdark);
       }
 
     #header-settings {
