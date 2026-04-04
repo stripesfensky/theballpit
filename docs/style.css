@@ -6,15 +6,20 @@
 }
 
 :root {
-  --red: #e13d3d;
-  --orange: #fec24d;
-  --green: #50bb85;
-  --purple: #8f79ec;
+  --randomA: #000000;
+  --randomB: #000000;
+  --randomC: #000000;
+  --randomD: #000000;
+
+  --header-bg: #FAFAFA;
+  --main-bg: #FFFFFF;
+
   --light: #fafafa;
   --mediumlight: #d3d3d3;
   --mediumdark: #222222;
   --dark: #101010;
   --white: #ffffff;
+
   --font: 'IBM Plex Sans', sans-serif;
 }
 
@@ -39,68 +44,32 @@ body {
 
 header {
   background-color: var(--light);
+  border-bottom: 7px solid;
+  border-image: linear-gradient(
+    to right, 
+    var(--randomA) 0% 25%, 
+    var(--randomB) 25% 50%, 
+    var(--randomC) 50% 75%, 
+    var(--randomD) 75% 100%) 7;
 }
 
-  #header-wrap {
+  #header-logo {
+    align-items: center;
     display: flex;
+    gap: 1rem;
   }
 
-    #header-logo {
-      align-items: center;
-      display: flex;
-      gap: 1rem;
+    #header-logo-brandmark {
+      height: 3rem;
+      max-height: 3rem;
+      width: 3rem;
     }
 
-      #header-logo-brandmark {
-        height: 3rem;
-        max-height: 3rem;
-        width: 3rem;
-      }
-
-      #header-logo-wordmark {
-        cursor: default;
-        margin: 0;
-        padding-top: 0.5rem;
-      }
-
-    #header-search {
-      flex: 1;
-      margin: 0.75rem 3rem -0.75rem 3rem;
+    #header-logo-wordmark {
+      cursor: default;
+      margin: 0;
+      padding-top: 0.5rem;
     }
-
-      #header-search-input {
-        border: 2px solid var(--mediumlight);
-        border-radius: 5px;
-        font-family: var(--font);
-        font-size: 0.75rem;
-        min-width: 100%;
-        padding: 0.5rem 1rem;
-      }
-
-      #header-search-input::placeholder {
-        color: var(--mediumdark);
-      }
-
-    #header-settings {
-      align-items: center;
-      display: flex;
-    }
-
-      #header-settings-icon {
-        font-size: 1.5rem;
-        margin: 0;
-        padding-top: 0.5rem;
-      }
-
-      #header-settings-icon:hover {
-        cursor: pointer;
-        color: var(--orange);
-        transition: 0.2s;
-      }
-
-      #header-darkmode-icon:hover {
-        cursor: pointer;
-      }
 
 main {
   flex: 1;
