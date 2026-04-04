@@ -12,7 +12,7 @@ function generateColors() {
   var colors = ["#E13D3D", "#FEC24D", "#50BB85", "#8F79EC"];
 
   /* https://stackoverflow.com/a/46545530 */
-  var colors = colors
+  colors = colors
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
