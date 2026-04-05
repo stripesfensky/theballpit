@@ -9,7 +9,14 @@ window.addEventListener("load", () => {
 
 function generateColors() {
   var root = document.documentElement;
-  var colors = ["#E13D3D", "#FEC24D", "#50BB85", "#8F79EC"];
+  var styles = getComputedStyle(root);
+  
+  var colors = [
+    styles.getPropertyValue("--randomA"), 
+    styles.getPropertyValue("--randomB"), 
+    styles.getPropertyValue("--randomC"), 
+    styles.getPropertyValue("--randomD"), 
+  ];
 
   /* https://stackoverflow.com/a/46545530 */
   colors = colors
@@ -23,17 +30,24 @@ function generateColors() {
   root.style.setProperty("--randomD", colors[3]);
 }
 
-function brandmarkColors(){
+function brandmarkColors() {
   var styles = getComputedStyle(document.documentElement);
-  var brandmark = document.querySelector("#header-logo-brandmark");
-  var brandmark_svg = brandmark.contentDocument;  
-  var brandmark_svg_ball1 = brandmark_svg.querySelector("#ball1");
-  var brandmark_svg_ball2 = brandmark_svg.querySelector("#ball2");
-  var brandmark_svg_ball3 = brandmark_svg.querySelector("#ball3");
-  var brandmark_svg_pit = brandmark_svg.querySelector("#pit");
+  var brandmarks = document.querySelectorAll(".logo-brandmark");
 
-  brandmark_svg_ball1.setAttribute("fill", styles.getPropertyValue("--randomA"));
-  brandmark_svg_ball2.setAttribute("fill", styles.getPropertyValue("--randomB"));
-  brandmark_svg_ball3.setAttribute("fill", styles.getPropertyValue("--randomC"));
-  brandmark_svg_pit.setAttribute("fill", styles.getPropertyValue("--dark"));
+  brandmarks.forEach(brandmark => {
+    var svg = brandmark.contentDocument;  
+
+    var elements = {
+      "#ball1": "--randomA",
+      "#ball2": "--randomB",
+      "#ball3": "--randomC",
+      "#pit": "--main-color"
+    }
+
+    Object.entries(elements).forEach(([id, color]) => {
+      var element = svg.querySelector(id);
+      element.setAttribute("fill", styles.getPropertyValue(color));
+    });
+  });
+
 }
