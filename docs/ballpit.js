@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function() {}, true);
+
 var theme = localStorage.getItem("theme") || "dark";
 setTheme(theme);
   
