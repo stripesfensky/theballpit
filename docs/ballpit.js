@@ -67,7 +67,7 @@ function showNavItem(nav, show, hide) {
       hide.classList.add("nav-hidden");
       show.classList.remove("nav-hidden");
       nav.classList.remove("nav-section-hidden");
-    }, 200);
+    }, 600);
   }
   else {
     hide.classList.add("nav-hidden");
