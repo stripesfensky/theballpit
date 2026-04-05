@@ -1,8 +1,8 @@
+var theme = localStorage.getItem("theme") || "dark";
+setTheme(theme);
+  
 window.addEventListener("load", () => {
   var html = document.querySelector("html");
-  var theme = localStorage.getItem("theme") || "light";
-
-  setTheme(theme);
   generateColors();
   brandmarkColors();
 
