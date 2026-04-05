@@ -69,6 +69,7 @@ p {
 
 .btn {
   transition: 0.2s;
+  -webkit-tap-highlight-color: transparent; 
 }
 
 .flx {
@@ -146,11 +147,11 @@ header {
 
 .header-button:active {
   cursor: pointer;
-  background-color: var(--randomB);
+  background-color: var(--randomB) !important;
 }
 
 @media (hover: hover) {
-  .header-button:hover, .header-button:focus {
+  .header-button:hover {
     cursor: pointer;
     background-color: var(--randomB);
   }
@@ -227,11 +228,11 @@ nav {
 
 .nav-button:active {
   cursor: pointer;
-  background-color: var(--randomC);
+  background-color: var(--randomC) !important;
 }
 
 @media (hover: hover) {
-  .nav-button:hover, .nav-button:focus {
+  .nav-button:hover {
     cursor: pointer;
     background-color: var(--randomC);
   }
