@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
   var html = document.querySelector("html");
+  var theme = localStorage.getItem("theme") || "light";
 
+  setTheme(theme);
   generateColors();
   brandmarkColors();
 
@@ -21,7 +23,37 @@ window.addEventListener("load", () => {
     var nav_settings = document.querySelector("#nav-settings");
     showNavItem(nav, nav_settings, nav_search);
   });
+
+  var nav_darklight_toggle = document.querySelector("#nav-darklight-toggle");
+  nav_darklight_toggle.addEventListener("click", () => {
+    theme = localStorage.getItem("theme");
+    if (theme == "light") {
+      setTheme("dark");
+      brandmarkColors();
+    }
+    else {
+      setTheme("light");
+      brandmarkColors();
+    }
+  });
 });
+
+function setTheme(theme) {
+  var root = document.documentElement;
+  var styles = getComputedStyle(root);
+  var properties = [
+    "header-bg",
+    "nav-bg",
+    "nav-btn",
+    "main-bg",
+    "main-color"
+  ];
+  properties.forEach(property => {
+    var value = styles.getPropertyValue(`--${theme}-${property}`);
+    root.style.setProperty(`--${property}`, value);
+  });
+  localStorage.setItem("theme", theme);
+}
 
 function showNavItem(nav, show, hide) {
   if (!nav.classList.contains("nav-section-hidden") && !show.classList.contains("nav-hidden")) {
