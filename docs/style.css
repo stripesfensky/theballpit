@@ -144,9 +144,16 @@ header {
   width: 1em;
 }
 
-.header-button:hover, .header-button:focus {
+.header-button:active {
   cursor: pointer;
   background-color: var(--randomB);
+}
+
+@media (hover: hover) {
+  .header-button:hover, .header-button:focus {
+    cursor: pointer;
+    background-color: var(--randomB);
+  }
 }
 
 nav {
@@ -218,9 +225,16 @@ nav {
   width: 0.75rem;
 }
 
-.nav-button:hover, .nav-button:active {
+.nav-button:active {
   cursor: pointer;
   background-color: var(--randomC);
+}
+
+@media (hover: hover) {
+  .nav-button:hover, .nav-button:focus {
+    cursor: pointer;
+    background-color: var(--randomC);
+  }
 }
 
 main {
