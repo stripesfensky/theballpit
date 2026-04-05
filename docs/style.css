@@ -1,26 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 
-* {
-  box-sizing: border-box;
-}
-
 :root {
-  --randomA: #000000;
-  --randomB: #000000;
-  --randomC: #000000;
-  --randomD: #000000;
+  --randomA: #E13D3D;
+  --randomB: #FEC24D;
+  --randomC: #50BB85;
+  --randomD: #8F79EC;
 
-  --header-bg: #FAFAFA;
-  --main-bg: #FFFFFF;
-
-  --light: #fafafa;
-  --mediumlight: #d3d3d3;
-  --mediumdark: #222222;
-  --dark: #101010;
-  --white: #ffffff;
+  --header-bg: #222222;
+  --main-bg: #101010;
+  --main-color: #FAFAFA;
 
   --font: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.mw {
+  margin: 0 auto;
+  width: min(60rem, 100vw);
+}
+
+.pd {
+  padding: 1rem 2rem;
+}
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
 }
 
 html {
@@ -30,47 +50,105 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--main-bg);
+  color: var(--main-color);
   display: flex;
   flex-direction: column;
   margin: 0;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  width: min(60rem, 100vw);
+  min-height: 100vh;
 }
 
 header {
-  background-color: var(--light);
-  border-bottom: 7px solid;
+  background-color: var(--header-bg);
+  border-bottom: 0.4rem solid;
   border-image: linear-gradient(
     to right, 
     var(--randomA) 0% 25%, 
     var(--randomB) 25% 50%, 
     var(--randomC) 50% 75%, 
-    var(--randomD) 75% 100%) 7;
+    var(--randomD) 75% 100%) 1;
 }
 
-  #header-logo {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-  }
+#header-logo {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
 
-    #header-logo-brandmark {
-      height: 3rem;
-      max-height: 3rem;
-      width: 3rem;
-    }
+#header-logo-brandmark {
+  height: 3rem;
+  max-height: 3rem;
+  width: 3rem;
+}
 
-    #header-logo-wordmark {
-      cursor: default;
-      margin: 0;
-      padding-top: 0.5rem;
-    }
+#header-logo-wordmark {
+  cursor: default;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+#nav {
+  gap: 1rem;
+}
+
+#search {
+  flex: 1;
+  position: relative;
+}
+
+#search i {
+  position: absolute;
+  margin-left: calc(100% - 2rem);
+  margin-top: 0.5rem;
+}
+
+#search-bar {
+  background: none;
+  border: .2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  color: var(--main-color);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+#search-bar::placeholder {
+  color: var(--main-color);
+}
+
+#settings i {
+  margin-top: 0.5rem;
+}
 
 main {
+  display: flex;
+  align-items: center;
   flex: 1;
+  height: 100%;
+}
+
+footer {
+  background-color: var(--header-bg);
+  border-top: 0.4rem solid;
+  border-image: linear-gradient(
+    to right, 
+    var(--randomA) 0% 25%, 
+    var(--randomB) 25% 50%, 
+    var(--randomC) 50% 75%, 
+    var(--randomD) 75% 100%) 1;
+}
+
+#footer-logo {
+  align-items: center;
+  display: flex;
+}
+
+#footer-logo-brandmark {
+  height: 3rem;
+  max-height: 3rem;
+  padding-bottom: 0.5rem;
+  width: 3rem;
 }
