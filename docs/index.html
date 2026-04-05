@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="brd">
-      <div id="header" class="mw pd container">
+      <div id="header" class="mw pd flx">
         <div id="header-logo">
           <object id="header-logo-brandmark" class="logo-brandmark" type="image/svg+xml" data="logo.svg"></object>
           <h1 id="header-logo-wordmark">
@@ -18,47 +18,47 @@
           </h1>
         </div>
         <div id="header-search">
-          <div class="header-button btn" title="Search">
+          <div class="header-button btn flx" title="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
         <div id="header-settings">
-          <div class="header-button btn" title="User Settings">
+          <div class="header-button btn flx" title="User Settings">
             <i class="fa-regular fa-user"></i>
           </div>
         </div>
       </div>
     </header>
-    <nav>
-      <div id="nav" class="mw pd container">
-        <!-- <div id="nav-search">
+    <nav class="nav-section-hidden">
+      <div id="nav" class="mw pd flx">
+        <div id="nav-search" class="nav-hidden">
           <i class="fa-solid fa-magnifying-glass i-mg"></i>
           <label for="nav-search-bar" hidden>Search</label>
           <input id="nav-search-bar" type="text" placeholder="Search The Ball Pit..."/>
-        </div> -->
-        <div id="nav-settings">
+        </div>
+        <div id="nav-settings" class="flx nav-hiddesn">
           <div id="nav-user-info">
             Logged in as <b>Stripes</b>
           </div>
           <div id="nav-darklight-toggle">
-            <div class="nav-button btn" title="Toggle Dark/Light">
+            <div class="nav-button btn flx" title="Toggle Dark/Light">
               <i class="fa-solid fa-moon"></i>
             </div>
           </div>
           <div id="nav-profile">
-            <div class="nav-button btn" title="User Page">
+            <div class="nav-button btn flx" title="User Page">
               <i class="fa-solid fa-address-book"></i>
             </div>
           </div>
           <div id="nav-logout">
-            <div class="nav-button btn" title="Logout">
+            <div class="nav-button btn flx" title="Logout">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <main>
+    <main class="flx">
       <div id="main" class="mw pd">
         <h1>The Ball Pit</h1>
         <h2>What is The Ball Pit?</h2>
@@ -77,7 +77,14 @@
       </div>
     </main>
     <footer class="brd">
-      <div id="footer" class="mw pd container">
+      <div id="footer" class="mw pd flx">
+        <div id="footer-disclaimer">
+          <p>
+            User-generated text content is available under the 
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International license</a> 
+            unless otherwise noted. All brands and associated copyrights and trademarks belong to their respective owners.
+          </p>
+        </div>
         <div id="footer-logo">
           <object id="footer-logo-brandmark" class="logo-brandmark" type="image/svg+xml" data="logo.svg"></object>
         </div>
