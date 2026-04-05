@@ -8,23 +8,33 @@
     <script src="ballpit.js"></script>
   </head>
   <body>
-    <header>
+    <header class="brd">
       <div id="header" class="mw pd container">
         <div id="header-logo">
           <object id="header-logo-brandmark" class="logo-brandmark" type="image/svg+xml" data="logo.svg"></object>
-          <h1 id="header-logo-wordmark">the ball pit</h1>
+          <h1 id="header-logo-wordmark">
+            <span id="header-logo-wordmark-rg">the ball pit</span>
+            <span id="header-logo-wordmark-sm">tbp</span>
+          </h1>
+        </div>
+        <div id="header-search">
+          <div class="header-button" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div id="header-settings">
+          <div class="header-button" title="User Settings">
+            <i class="fa-regular fa-user"></i>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div id="nav" class="mw pd container">
-        <div id="search">
+        <div id="nav-search">
           <i class="fa-solid fa-magnifying-glass i-mg"></i>
-          <label for="search-bar" hidden>Search</label>
-          <input id="search-bar" type="text" placeholder="Search The Ball Pit..."/>
-        </div>
-        <div id="settings">
-          <i class="fa-regular fa-user i-mg"></i>
+          <label for="nav-search-bar" hidden>Search</label>
+          <input id="nav-search-bar" type="text" placeholder="Search The Ball Pit..."/>
         </div>
       </div>
     </nav>
@@ -46,7 +56,7 @@
         <h2>More to come!</h2>
       </div>
     </main>
-    <footer>
+    <footer class="brd">
       <div id="footer" class="mw pd container">
         <div id="footer-logo">
           <object id="footer-logo-brandmark" class="logo-brandmark" type="image/svg+xml" data="logo.svg"></object>
