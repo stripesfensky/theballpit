@@ -24,17 +24,21 @@ window.addEventListener("load", () => {
 });
 
 function showNavItem(nav, show, hide) {
-  if (nav.classList.contains("nav-section-hidden")) {
-    if (!hide.classList.contains("nav-hidden")) {
+  if (!nav.classList.contains("nav-section-hidden") && !show.classList.contains("nav-hidden")) {
+    nav.classList.add("nav-section-hidden");
+  } 
+  else if (!nav.classList.contains("nav-section-hidden") && show.classList.contains("nav-hidden")) {
+    nav.classList.add("nav-section-hidden");
+    setTimeout(() => {
       hide.classList.add("nav-hidden");
-    }
-    if (show.classList.contains("nav-hidden")) {
       show.classList.remove("nav-hidden");
-    }
-    nav.classList.remove("nav-section-hidden");
+      nav.classList.remove("nav-section-hidden");
+    }, 200);
   }
   else {
-    nav.classList.add("nav-section-hidden");
+    hide.classList.add("nav-hidden");
+    show.classList.remove("nav-hidden");
+    nav.classList.remove("nav-section-hidden");
   }
 }
 
