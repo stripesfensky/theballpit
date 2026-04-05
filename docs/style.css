@@ -37,6 +37,10 @@ p {
   padding: 1rem 2rem;
 }
 
+.i-mg {
+  margin-top: 0.7rem;
+}
+
 .container {
   align-items: flex-start;
   display: flex;
@@ -99,7 +103,6 @@ header {
 #search i {
   position: absolute;
   margin-left: calc(100% - 2rem);
-  margin-top: 0.5rem;
 }
 
 #search-bar {
@@ -117,10 +120,6 @@ header {
 
 #search-bar::placeholder {
   color: var(--main-color);
-}
-
-#settings i {
-  margin-top: 0.5rem;
 }
 
 main {
