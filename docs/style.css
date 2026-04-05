@@ -124,7 +124,7 @@ header {
   transition: 0.2s;
 }
 
-.header-button:hover {
+.header-button:hover, .header-button:active {
   cursor: pointer;
   background-color: var(--randomA);
 }
