@@ -30,7 +30,7 @@ class LocationInitiative(models.Model):
   debut = models.DateField(blank = True)
 
 class Manufacturer(models.Model):
-  name = models.charField
+  name = models.CharField
 
 class Character(models.Model):
   name = models.CharField()

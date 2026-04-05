@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ViewerConfig(AppConfig):
+class config(AppConfig):
     name = 'viewer'
