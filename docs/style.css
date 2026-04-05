@@ -210,6 +210,11 @@ nav {
   min-width: 100%;
 }
 
+#nav-profile, #nav-logout, #nav-profile:hover, #nav-logout:hover {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
 #nav-user-info {
   flex: 1;
 }
