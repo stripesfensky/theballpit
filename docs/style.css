@@ -141,7 +141,7 @@ header {
   width: 1em;
 }
 
-.header-button:hover, .header-button:active {
+.header-button:hover, .header-button:focus {
   cursor: pointer;
   background-color: var(--randomB);
 }
