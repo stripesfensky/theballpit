@@ -69,8 +69,11 @@ p {
 
 .btn {
   appearance: none;
-  transition: background-color 0.2s;
   -webkit-tap-highlight-color: transparent; 
+}
+
+.btn:hover {
+  transition: background-color 0.2s;
 }
 
 .flx {
