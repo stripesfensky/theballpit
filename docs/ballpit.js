@@ -1,32 +1,32 @@
 document.addEventListener("touchstart", function() {}, true);
 
-var theme = localStorage.getItem("theme") || "dark";
+let theme = localStorage.getItem("theme") || "dark";
 setTheme(theme);
   
 window.addEventListener("load", () => {
-  var html = document.querySelector("html");
+  let html = document.querySelector("html");
   generateColors();
   brandmarkColors();
 
   html.style.visibility = "visible";
 
-  var header_search = document.querySelector("#header-search");
+  let header_search = document.querySelector("#header-search");
   header_search.addEventListener("click", () => {
-    var nav = document.querySelector("nav");
-    var nav_search = document.querySelector("#nav-search");
-    var nav_settings = document.querySelector("#nav-settings");
+    let nav = document.querySelector("nav");
+    let nav_search = document.querySelector("#nav-search");
+    let nav_settings = document.querySelector("#nav-settings");
     showNavItem(nav, nav_search, nav_settings);
   });
 
-  var header_settings = document.querySelector("#header-settings");
+  let header_settings = document.querySelector("#header-settings");
   header_settings.addEventListener("click", () => {
-    var nav = document.querySelector("nav");
-    var nav_search = document.querySelector("#nav-search");
-    var nav_settings = document.querySelector("#nav-settings");
+    let nav = document.querySelector("nav");
+    let nav_search = document.querySelector("#nav-search");
+    let nav_settings = document.querySelector("#nav-settings");
     showNavItem(nav, nav_settings, nav_search);
   });
 
-  var nav_darklight_toggle = document.querySelector("#nav-darklight-toggle");
+  let nav_darklight_toggle = document.querySelector("#nav-darklight-toggle");
   nav_darklight_toggle.addEventListener("click", () => {
     theme = localStorage.getItem("theme");
     if (theme == "light") {
@@ -41,9 +41,9 @@ window.addEventListener("load", () => {
 });
 
 function setTheme(theme) {
-  var root = document.documentElement;
-  var styles = getComputedStyle(root);
-  var properties = [
+  let root = document.documentElement;
+  let styles = getComputedStyle(root);
+  let properties = [
     "header-bg",
     "nav-bg",
     "nav-btn",
@@ -51,7 +51,7 @@ function setTheme(theme) {
     "main-color"
   ];
   properties.forEach(property => {
-    var value = styles.getPropertyValue(`--${theme}-${property}`);
+    let value = styles.getPropertyValue(`--${theme}-${property}`);
     root.style.setProperty(`--${property}`, value);
   });
   localStorage.setItem("theme", theme);
@@ -77,10 +77,10 @@ function showNavItem(nav, show, hide) {
 }
 
 function generateColors() {
-  var root = document.documentElement;
-  var styles = getComputedStyle(root);
+  let root = document.documentElement;
+  let styles = getComputedStyle(root);
   
-  var colors = [
+  let colors = [
     styles.getPropertyValue("--randomA"), 
     styles.getPropertyValue("--randomB"), 
     styles.getPropertyValue("--randomC"), 
@@ -100,13 +100,13 @@ function generateColors() {
 }
 
 function brandmarkColors() {
-  var styles = getComputedStyle(document.documentElement);
-  var brandmarks = document.querySelectorAll(".logo-brandmark");
+  let styles = getComputedStyle(document.documentElement);
+  let brandmarks = document.querySelectorAll(".logo-brandmark");
 
   brandmarks.forEach(brandmark => {
-    var svg = brandmark.contentDocument;  
+    let svg = brandmark.contentDocument;  
 
-    var elements = {
+    let elements = {
       "#ball1": "--randomA",
       "#ball2": "--randomB",
       "#ball3": "--randomC",
@@ -114,7 +114,7 @@ function brandmarkColors() {
     }
 
     Object.entries(elements).forEach(([id, color]) => {
-      var element = svg.querySelector(id);
+      let element = svg.querySelector(id);
       element.setAttribute("fill", styles.getPropertyValue(color));
     });
   });
